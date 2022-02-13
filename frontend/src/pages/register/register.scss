@@ -1,0 +1,41 @@
+.rightRegister {
+  border: 2px solid green;
+  width: fit-content;
+  border-radius: 40px;
+  padding: 10px;
+  margin: 10px auto;
+  text-align: center;
+
+  & p {
+    margin: 0;
+  }
+}
+
+.falseRegister {
+  border: 2px solid #ff0000;
+  width: fit-content;
+  border-radius: 40px;
+  padding: 10px;
+  margin: 10px auto;
+  text-align: center;
+
+  & p {
+    margin: 5px 0;
+  }
+}
+
+.auth-page {
+  background-color: #aeefad;
+  width: 100%;
+  padding: 2rem;
+  min-height: 100vh;
+  margin: 0;
+  & {
+    #tel-register::-webkit-outer-spin-button,
+    #tel-register::-webkit-inner-spin-button {
+      /* display: none; <- Crashes Chrome on hover */
+      -webkit-appearance: none;
+      margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+    }
+  }
+}

@@ -1,4 +1,5 @@
 const db = require('../db');
+const {validationResult} = require('express-validator')
 const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
 
@@ -9,6 +10,14 @@ const generateJwt = (id, fullName) => {
 class UserController {
     async createUser(req, res) {
         try {
+            const errors = validationResult(req)
+            if (!errors.isEmpty()) {
+                return res.status(200).json({
+                    errors: errors.array(),
+                    message: 'Некоректні дані при реєстрації'
+                })
+            }
+
             const {userId, fullName, email, tel, password, passwordConfirm} = req.body
 
             const hashPassword = await bcrypt.hash(password, 12)

@@ -1,9 +1,17 @@
 import React from 'react'
 import './navbar.scss'
 import {Container, Nav, Navbar, NavDropdown} from 'react-bootstrap';
+import i18n from "../../i18n";
 import {Link} from 'react-router-dom'
 
 const NavBars = () => {
+
+    function changeLanguage(lng) {
+        if (lng) {
+            i18n.changeLanguage(lng);
+        }
+    }
+
     return (
         <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
             <Container>
@@ -16,9 +24,9 @@ const NavBars = () => {
                     </Nav>
                     <Nav>
                         <NavDropdown title="Мова" id="collasible-nav-dropdown">
-                            <NavDropdown.Item href="#action/3.1">Українска</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.2">Російська</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.3">Англійська</NavDropdown.Item>
+                            <NavDropdown.Item href="#action/3.1" onClick={() => changeLanguage('uk')}>Українска</NavDropdown.Item>
+                            <NavDropdown.Item href="#action/3.2" onClick={() => changeLanguage('ru')}>Російська</NavDropdown.Item>
+                            <NavDropdown.Item href="#action/3.3" onClick={() => changeLanguage('en')}>Англійська</NavDropdown.Item>
                         </NavDropdown>
                         <Link className="nav-link" to="/register">Реєстрація</Link>
                         <Link className="nav-link" to="/login">Вхід</Link>

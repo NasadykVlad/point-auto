@@ -1,0 +1,68 @@
+.cars {
+  max-width: 1060px;
+  margin: 20px auto 0 20%;
+
+  .Cars {
+    display: flex;
+    justify-content: space-between;
+
+    & ul {
+      display: flex;
+      align-items: center;
+      list-style: none;
+      width: 100%;
+      margin: 0;
+      justify-content: space-evenly;
+
+      & li {
+        & a {
+          text-decoration: underline;
+          font-size: 20px;
+          color: black;
+
+          &:hover {
+            color: #DB5C69;
+          }
+        }
+      }
+    }
+
+    & div {
+      display: flex;
+    }
+
+    &_sellCar a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 7px;
+      font-size: 20px;
+      text-decoration: none;
+      width: 280px;
+      height: 60px;
+      background-color: #77BF36;
+      color: white;
+      transition: all .4s;
+
+      &:hover {
+        transition: .4s;
+        background-color: #84d243;
+      }
+
+      & span {
+        font-size: 35px;
+        font-weight: 700;
+        margin: 0 6px 2px 0;
+      }
+    }
+
+    &_secondNav {
+      width: 100%;
+      display: flex;
+    }
+  }
+  & h2 {
+    font-size: 22px;
+    margin: 10px 0;
+  }
+}

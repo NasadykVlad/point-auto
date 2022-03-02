@@ -1,6 +1,55 @@
-.navbar {
-  padding: 1rem;
-  &-brand {
-    margin-bottom: 3px;
+.nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #F0F2FA;
+  padding: 0 300px;
+  & ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 10px 0;
+    & li {
+      display: flex;
+      align-items: center;
+      text-align: center;
+      margin: 0 10px;
+      & a {
+        text-decoration: none;
+        color: black;
+        font-size: 16px;
+        &:hover {
+          color: black;
+          text-decoration: underline;
+        }
+        & svg {
+          width: 1.4em;
+          height: 1.4em;
+        }
+      }
+      & .nav_login {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 150px;
+        & span {
+          font-size: 14px;
+        }
+        & img {
+          width: 36px;
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+  &_switchLang {
+    & span {
+      font-size: 14px;
+      color: grey
+    }
+    & span:nth-child(2) {
+      margin-left: 10px;
+    }
   }
 }

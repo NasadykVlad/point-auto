@@ -1,12 +1,12 @@
 import React from 'react'
 import {Route, Routes} from 'react-router-dom'
 import MainPage from './pages/mainPage/mainPage'
-import Landing from './pages/landing/landing'
+import Ria from './pages/ria/ria'
 import NotFound from "./pages/404/404";
-import New from "./pages/news/new";
-import UsedCars from "./pages/usedCars/usedCars";
-import Login from "./pages/login/login";
-import Register from "./pages/register/register"
+import Cars from "./pages/cars/cars";
+import RealEstate from "./pages/real-estate/real-estate";
+import AutoParts from "./pages/auto-parts/auto-parts";
+import AutoProducts from "./pages/auto-products/auto-products";
 
 export const useRoutes = (isLogin) => {
     if (isLogin) {
@@ -20,11 +20,11 @@ export const useRoutes = (isLogin) => {
         return (
             <Routes>
                 <Route path="*" element={<NotFound />}/>
-                <Route path="/" exact element={<Landing/>}/>
-                <Route path="/news" exact element={<New />}/>
-                <Route path="/used-cars" exact element={<UsedCars />} />
-                <Route path="/register" exact element={<Register />} />
-                <Route path="/login" exact element={<Login />} />
+                <Route path="/" exact element={<Cars />}/>
+                <Route path="/ria" exact element={<Ria/>}/>
+                <Route path="/real-estate" exact element={<RealEstate />} />
+                <Route path="/auto-products" exact element={<AutoProducts />} />
+                <Route path="/auto-parts" exact element={<AutoParts />} />
             </Routes>
         )
     }

@@ -1,40 +1,32 @@
 import React from 'react'
 import './navbar.scss'
-import {Container, Nav, Navbar, NavDropdown} from 'react-bootstrap';
 import i18n from "../../i18n";
+import {IoIosNotificationsOutline, IoMdHeartEmpty} from 'react-icons/io'
+import {MdTagFaces} from 'react-icons/md'
 import {Link} from 'react-router-dom'
 
 const NavBars = () => {
-
     function changeLanguage(lng) {
         if (lng) {
             i18n.changeLanguage(lng);
         }
     }
 
-    return (
-        <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-            <Container>
-                <Link className="navbar-brand" to="/">Point Auto</Link>
-                <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
-                <Navbar.Collapse id="responsive-navbar-nav">
-                    <Nav className="me-auto">
-                        <Link className="nav-link" to="/used-cars">Вживані авто</Link>
-                        <Link className="nav-link" to="/news">Новини</Link>
-                    </Nav>
-                    <Nav>
-                        <NavDropdown title="Мова" id="collasible-nav-dropdown">
-                            <NavDropdown.Item href="#action/3.1" onClick={() => changeLanguage('uk')}>Українска</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.2" onClick={() => changeLanguage('ru')}>Російська</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.3" onClick={() => changeLanguage('en')}>Англійська</NavDropdown.Item>
-                        </NavDropdown>
-                        <Link className="nav-link" to="/register">Реєстрація</Link>
-                        <Link className="nav-link" to="/login">Вхід</Link>
-                    </Nav>
-                </Navbar.Collapse>
-            </Container>
-        </Navbar>
-    );
+    return (<nav className="nav">
+        <ul>
+            <li><Link to="/ria">RIA.com</Link></li>
+            <li><Link to="/">Автомобілі</Link></li>
+            <li><Link to="/real-estate">Нерухомість</Link></li>
+            <li><Link to="/auto-products">Автотовари</Link></li>
+            <li><Link to="/auto-parts">Автозапчастини</Link></li>
+        </ul>
+        <ul>
+            <li><Link to="/favourite"><IoMdHeartEmpty/></Link></li>
+            <li><Link to="/notification"><IoIosNotificationsOutline/></Link></li>
+            <li><Link className="nav_login" to="/login"> <img src="./images/face.png" alt="face"/> <span>Увійти в кабінет</span></Link></li>
+            <li className="nav_switchLang"><span>Рус</span><span>Укр</span></li>
+        </ul>
+    </nav>);
 };
 
 export default NavBars;

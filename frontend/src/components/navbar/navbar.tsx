@@ -2,11 +2,10 @@ import React from 'react'
 import './navbar.scss'
 import i18n from "../../i18n";
 import {IoIosNotificationsOutline, IoMdHeartEmpty} from 'react-icons/io'
-import {MdTagFaces} from 'react-icons/md'
 import {Link} from 'react-router-dom'
 
 const NavBars = () => {
-    function changeLanguage(lng) {
+    function changeLanguage(lng: string) {
         if (lng) {
             i18n.changeLanguage(lng);
         }

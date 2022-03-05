@@ -7,6 +7,7 @@ import './app.scss'
 import NavBar from "../navbar/navbar";
 
 function App() {
+    // @ts-ignore
     const {login, logout, token, userId, isReady} = useAuth()
     const isLogin = !!token
     const routes = useRoutes(isLogin);

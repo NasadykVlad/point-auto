@@ -1,0 +1,67 @@
+.SearchCars {
+  display: flex;
+  justify-content: space-between;
+  & .search {
+    display: flex;
+    justify-content: space-between;
+    width: 69.5%;
+    padding: 1rem;
+    background-color: #DB5C4C;
+    &_left {
+      width: 48%;
+      & .type_cars {
+        width: 100%;
+        display: flex;
+        border-radius: 3px;
+        & input {
+          display: none;
+        }
+        & label {
+          width: 28%;
+          display: flex;
+          color: white;
+          text-align: center;
+          font-size: 15px;
+          padding: 5px 12px;
+          border: 1px solid white;
+          background-color: #DB5C4C;
+          &:nth-child(8) {
+            width: 47%;
+            border-top-right-radius: 3px;
+            border-bottom-right-radius: 3px;
+          }
+          &:nth-child(2) {
+            border-top-left-radius: 3px;
+            border-bottom-left-radius: 3px;
+          }
+          & span svg {
+            font-size: 13px;
+            position: relative;
+            color: #DB5C4C;
+            right: 2px;
+          }
+          & span {
+            display: none;
+          }
+        }
+        & input[type=radio]:checked+label {
+          background-color: white;
+          color: black;
+          & span {
+            display: inline;
+          }
+        }
+      }
+    }
+    &_right {
+      width: 47%;
+      background-color: #84d243;
+    }
+  }
+  & .ads {
+    width: 29%;
+    & img {
+      width: 100%;
+    }
+  }
+}

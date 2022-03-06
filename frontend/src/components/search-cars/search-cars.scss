@@ -1,21 +1,26 @@
 .SearchCars {
   display: flex;
   justify-content: space-between;
+
   & .search {
     display: flex;
     justify-content: space-between;
     width: 69.5%;
     padding: 1rem;
     background-color: #DB5C4C;
+
     &_left {
       width: 48%;
+
       & .type_cars {
         width: 100%;
         display: flex;
         border-radius: 3px;
+
         & input {
           display: none;
         }
+
         & label {
           width: 28%;
           display: flex;
@@ -25,41 +30,86 @@
           padding: 5px 12px;
           border: 1px solid white;
           background-color: #DB5C4C;
+
           &:nth-child(8) {
             width: 47%;
             border-top-right-radius: 3px;
             border-bottom-right-radius: 3px;
           }
+
           &:nth-child(2) {
             border-top-left-radius: 3px;
             border-bottom-left-radius: 3px;
           }
+
           & span svg {
             font-size: 13px;
             position: relative;
             color: #DB5C4C;
             right: 2px;
           }
+
           & span {
             display: none;
           }
         }
-        & input[type=radio]:checked+label {
+
+        & input[type=radio]:checked + label {
           background-color: white;
           color: black;
+
           & span {
             display: inline;
           }
         }
       }
+
+      & select {
+        width: 100%;
+        margin-top: 20px;
+        padding: 6px 5px;
+        font-size: 18px;
+        border-radius: 5px;
+        &:focus-visible {
+          outline: none;
+        }
+        & option {
+          color: black;
+        }
+      }
+      & .selected, select {
+        background: #fff url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAFAQMAAACdEUUJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAZQTFRF////21xMvXoWTAAAAAF0Uk5TAEDm2GYAAAAZSURBVAjXY/jfwMBQz8DAYAfEMkDMwcAAACb4AmFjj8TfAAAAAElFTkSuQmCC") 100% 50% no-repeat;
+        appearance: none;
+      }
+
+      .grey {
+        color: grey;
+      }
+
+      & a {
+        color: white;
+        text-decoration: none;
+        border: 1px solid white;
+        padding: 5px 20px;
+        border-radius: 5px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 17px;
+        margin-top: 20px;
+      }
     }
+
     &_right {
       width: 47%;
       background-color: #84d243;
     }
   }
+
   & .ads {
     width: 29%;
+
     & img {
       width: 100%;
     }

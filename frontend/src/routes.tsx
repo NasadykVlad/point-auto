@@ -8,23 +8,23 @@ import RealEstate from "./pages/real-estate/real-estate";
 import AutoParts from "./pages/auto-parts/auto-parts";
 import AutoProducts from "./pages/auto-products/auto-products";
 
-export const useRoutes = (isLogin) => {
+export const useRoutes = (isLogin: null | boolean) => {
     if (isLogin) {
         return (
             <Routes>
-                <Route path="*" element={<NotFound />}/>
-                <Route path="/" exact element={<MainPage/>}/>
+                <Route path="*" element={<NotFound/>}/>
+                <Route path="/" element={<MainPage/>}/>
             </Routes>
         )
     } else {
         return (
             <Routes>
-                <Route path="*" element={<NotFound />}/>
-                <Route path="/" exact element={<Cars />}/>
-                <Route path="/ria" exact element={<Ria/>}/>
-                <Route path="/real-estate" exact element={<RealEstate />} />
-                <Route path="/auto-products" exact element={<AutoProducts />} />
-                <Route path="/auto-parts" exact element={<AutoParts />} />
+                <Route path="*" element={<NotFound/>}/>
+                <Route path="/" element={<Cars/>}/>
+                <Route path="/ria" element={<Ria/>}/>
+                <Route path="/real-estate" element={<RealEstate/>}/>
+                <Route path="/auto-products" element={<AutoProducts/>}/>
+                <Route path="/auto-parts" element={<AutoParts/>}/>
             </Routes>
         )
     }

@@ -1,5 +1,5 @@
 export interface userState {
-    token: null | string
+    token: null | string,
 }
 
 export enum userActionType {

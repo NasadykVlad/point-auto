@@ -19,7 +19,6 @@ export const login = (token: string) => {
     }
 }
 
-
 export const logout = () => {
     return async (dispatch: Dispatch<userAction>) => {
         try {
@@ -32,3 +31,4 @@ export const logout = () => {
         }
     }
 }
+

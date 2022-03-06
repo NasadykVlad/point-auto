@@ -1,7 +1,7 @@
 import {userActionType, userAction, userState} from '../../types/user'
 
 const initialState: userState = {
-    token: null
+    token: null,
 }
 
 

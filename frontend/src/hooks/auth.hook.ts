@@ -7,15 +7,12 @@ export const useAuth = () => {
 
     const {login, logout} = useActions()
 
-    const [isReady, setIsReady] = useState(false)
-
     useEffect(() => {
         const data = JSON.parse(localStorage.getItem('userData')!)
         if (data && data.token) {
             login(data.token)
         }
-        setIsReady(true)
     }, [])
 
-    return {login, logout, token, isReady}
+    return {login, logout, token}
 }

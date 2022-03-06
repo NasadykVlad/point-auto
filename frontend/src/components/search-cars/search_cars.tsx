@@ -4,7 +4,7 @@ import {BsCheckLg} from 'react-icons/bs'
 import {Link} from "react-router-dom";
 
 const SearchCars = () => {
-    const optionsType = [
+    const optionsType: {label: string, value: string}[] = [
         {label: 'Будь-які', value: 'any'},
         {label: 'Легкові', value: 'lehkovi'},
         {label: 'Мото', value: 'moto'},
@@ -17,6 +17,8 @@ const SearchCars = () => {
         {label: 'Повітряний транспорт', value: 'air'},
         {label: 'Автобудинки', value: 'auto-house'}
     ];
+
+    let classNamePlaceholderOption: string = '';
 
     let allCarsAndBrands = [
         {
@@ -102,7 +104,6 @@ const SearchCars = () => {
         setModel(event.target.value)
     }
 
-    let classNamePlaceholderOption: string = '';
     if (brand === 'Марка' || brand === 'Модель') {
         classNamePlaceholderOption = 'grey'
     }

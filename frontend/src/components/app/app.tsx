@@ -1,7 +1,7 @@
 import {BrowserRouter} from 'react-router-dom';
 import {useRoutes} from "../../routes";
 import {useAuth} from "../../hooks/auth.hook"
-import React, {useEffect} from "react";
+import React from "react";
 import './app.scss'
 import NavBar from "../navbar/navbar";
 

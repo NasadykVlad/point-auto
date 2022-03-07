@@ -1,10 +1,24 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import './auto-parts.scss'
 import {useAuth} from "../../hooks/auth.hook";
+import axios from "axios";
 
 const AutoParts = () => {
 
     const {login, logout} = useAuth()
+
+    const [users, setUsers] = useState<[]>([])
+
+    useEffect(() => {
+        fetchUsers()
+    }, [])
+
+    function fetchUsers() {
+        axios.get<[]>('https://jsonplaceholder.typicode.com/users')
+            .then(res => {
+                setUsers(res.data)
+            })
+    }
 
     return (
         <div>

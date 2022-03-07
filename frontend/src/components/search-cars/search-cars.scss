@@ -1,6 +1,31 @@
 .SearchCars {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  & select {
+    width: 100%;
+    margin-top: 20px;
+    padding: 6px 5px;
+    font-size: 18px;
+    border-radius: 5px;
+
+    &:focus-visible {
+      outline: none;
+    }
+
+    & option {
+      color: black;
+    }
+  }
+
+  .grey {
+    color: grey;
+  }
+
+  & .selected, select {
+    background: #fff url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAFAQMAAACdEUUJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAZQTFRF////21xMvXoWTAAAAAF0Uk5TAEDm2GYAAAAZSURBVAjXY/jfwMBQz8DAYAfEMkDMwcAAACb4AmFjj8TfAAAAAElFTkSuQmCC") 100% 50% no-repeat;
+    appearance: none;
+  }
 
   & .search {
     display: flex;
@@ -64,28 +89,6 @@
         }
       }
 
-      & select {
-        width: 100%;
-        margin-top: 20px;
-        padding: 6px 5px;
-        font-size: 18px;
-        border-radius: 5px;
-        &:focus-visible {
-          outline: none;
-        }
-        & option {
-          color: black;
-        }
-      }
-      & .selected, select {
-        background: #fff url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAFAQMAAACdEUUJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAZQTFRF////21xMvXoWTAAAAAF0Uk5TAEDm2GYAAAAZSURBVAjXY/jfwMBQz8DAYAfEMkDMwcAAACb4AmFjj8TfAAAAAElFTkSuQmCC") 100% 50% no-repeat;
-        appearance: none;
-      }
-
-      .grey {
-        color: grey;
-      }
-
       & a {
         color: white;
         text-decoration: none;
@@ -98,12 +101,153 @@
         justify-content: center;
         font-size: 17px;
         margin-top: 20px;
+        transition: .4s;
+        &:hover {
+          transition: .4s;
+          background-color: #C95C4E;
+        }
       }
     }
 
     &_right {
       width: 47%;
-      background-color: #84d243;
+      & .check_vin {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        & p {
+          display: flex;
+          align-items: center;
+          color: white;
+          font-size: 18px;
+          background-color: #246799;
+          border-radius: 3px;
+          line-height: 30px;
+          padding: 0 20px;
+          margin: 0;
+
+          & span {
+            margin-right: 10px;
+
+            & img {
+              width: 22px;
+              height: 22px;
+            }
+          }
+        }
+
+        label::before {
+          display: flex;
+          width: 28px;
+          height: 30px;
+          content: "";
+          border-radius: 2px;
+          background: #fff;
+          margin-left: 5px;
+        }
+
+        [type=checkbox]:checked + label:before {
+          background: #fff url("data:image/svg+xml;charset=utf-8,%3Csvg width='12' height='10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 5l3 3 7-7' stroke='%23DB5C4C' stroke-width='2.5'/%3E%3C/svg%3E") 50% no-repeat;
+          background-size: 16px;
+        }
+      }
+
+      & .region {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 20px;
+
+        & span {
+          font-size: 18px;
+          color: white;
+        }
+
+        & select {
+          width: 75%;
+          margin-top: 0;
+        }
+      }
+
+      & .year {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 24px;
+
+        & span {
+          font-size: 18px;
+          color: white;
+        }
+
+        & select {
+          width: 119px;
+          margin-top: 0;
+          &:nth-child(2) {
+            margin-left: 10px;
+          }
+        }
+
+        & div {
+          display: flex;
+          justify-content: flex-end;
+        }
+      }
+
+      & .price {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 20px;
+
+        & span {
+          font-size: 18px;
+          color: white;
+        }
+
+        & input {
+          width: 113px;
+          margin-top: 0;
+          border: none;
+          padding: 6px 5px;
+          font-size: 18px;
+          border-radius: 5px;
+          &:nth-child(2) {
+            margin-left: 10px;
+          }
+          &:focus {
+            border: none;
+            outline: none;
+          }
+        }
+      }
+
+      & a {
+        float: right;
+        color: white;
+        background-color: #2396e0;
+        text-decoration: none;
+        border: none;
+        padding: 4px 17px;
+        border-radius: 5px;
+        width: 74%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+        margin-top: 22px;
+        transition: .4s;
+        &:hover {
+          transition: .4s;
+          background-color: #39a3dc;
+        }
+        & span {
+          position: relative;
+          bottom: 2px;
+          right: 5px;
+        }
+      }
     }
   }
 

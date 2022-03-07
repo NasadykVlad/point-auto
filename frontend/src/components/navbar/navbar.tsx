@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react'
+import React from 'react'
 import './navbar.scss'
 import i18n from "../../i18n";
 import {IoIosNotificationsOutline, IoMdHeartEmpty} from 'react-icons/io'

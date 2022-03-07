@@ -1,6 +1,5 @@
 import {userAction, userActionType} from '../../types/user'
 import {Dispatch} from 'redux';
-import axios from 'axios'
 
 
 export const login = (token: string) => {

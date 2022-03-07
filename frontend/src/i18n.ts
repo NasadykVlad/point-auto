@@ -17,7 +17,7 @@ const resources = {
 
 i18n
     .use(detector)
-    .use(reactI18nextModule)
+    .use(reactI18nextModule as any)
     .init({
         resources,
         fallbackLng: "ua",

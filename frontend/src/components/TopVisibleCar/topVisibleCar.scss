@@ -1,0 +1,110 @@
+.top-cars {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+
+  & .right-block {
+    width: 48%;
+
+    & div {
+      width: 100%;
+    }
+
+    .box {
+      display: flex;
+      justify-content: space-between;
+
+      & a {
+        display: block;
+        width: 48%;
+        color: #3B72A1;
+        text-decoration: none;
+        font-size: 17px;
+
+        & p {
+          margin-top: 10px;
+          margin-bottom: 0;
+          line-height: .8;
+
+        }
+
+        span {
+          display: inline-block;
+          margin-bottom: 3px;
+          color: #414042;
+
+          & .dot {
+            margin-left: 15px;
+
+            &:before {
+              background: #898989;
+              padding: 1px;
+              border-radius: 50%;
+              display: inline-block;
+              left: -7px;
+              position: relative;
+              top: -5px;
+              content: "";
+            }
+          }
+
+          &.price {
+            color: #3c9806;
+            font-weight: bold;;
+          }
+        }
+
+        & img {
+          width: -webkit-fill-available;
+        }
+      }
+    }
+  }
+
+  & .left-block {
+    width: 48%;
+    display: block;
+    text-decoration: none;
+    font-size: 23px;
+    color: #3B72A1;
+
+    & p {
+      margin: 25px 0 0 0;
+      line-height: .8;
+    }
+
+    img {
+      width: 100%;
+    }
+
+    & span {
+      color: #414042;
+      font-size: 17px;
+
+      & .dot {
+        margin-left: 10px;
+
+        &:before {
+          background: #898989;
+          padding: 1px;
+          border-radius: 50%;
+          display: inline-block;
+          left: -7px;
+          position: relative;
+          top: -5px;
+          content: "";
+        }
+
+        &:nth-child(3) {
+          margin-left: 20px;
+        }
+      }
+    }
+
+    & .price {
+      color: #3c9806;
+      font-size: 30px;
+      font-weight: bold;
+    }
+  }
+}

@@ -1,7 +1,7 @@
 import React from "react"
 import './ria.scss'
 
-function Ria() {
+const Ria: React.FC = () => {
     return (
         <div className='Ria'>
          <h1>Ria</h1>

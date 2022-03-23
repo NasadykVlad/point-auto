@@ -1,8 +1,7 @@
 import React from 'react';
 import './404.scss'
 
-const NotFound = () => {
-
+const NotFound: React.FC = () => {
     return (
         <div className="NotFound">
             <figure>

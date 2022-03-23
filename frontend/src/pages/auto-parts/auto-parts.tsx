@@ -3,7 +3,7 @@ import './auto-parts.scss'
 import {useAuth} from "../../hooks/auth.hook";
 import axios from "axios";
 
-const AutoParts = () => {
+const AutoParts: React.FC = () => {
 
     const {login, logout} = useAuth()
 

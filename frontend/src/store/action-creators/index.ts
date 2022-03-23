@@ -3,5 +3,5 @@ import * as userAction from "./user";
 
 export default {
     ...topCarsAction,
-    ...userAction
+    ...userAction,
 }

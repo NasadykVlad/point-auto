@@ -1,7 +1,7 @@
 import React from 'react';
 import './real-estate.scss'
 
-const RealEstate = () => {
+const RealEstate: React.FC = () => {
     return (
         <div>
             <h1>RealEstate</h1>

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const AutoProducts = () => {
+const AutoProducts: React.FC = () => {
     return (
         <div>
             <h1>AutoProducts</h1>

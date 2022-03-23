@@ -5,7 +5,7 @@ import React from "react";
 import './app.scss'
 import NavBar from "../navbar/navbar";
 
-function App() {
+const App: React.FC = () => {
     const {token} = useAuth()
     const isLogin = !!token
     const routes = useRoutes(isLogin);

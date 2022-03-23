@@ -5,7 +5,7 @@ import {IoIosNotificationsOutline, IoMdHeartEmpty} from 'react-icons/io'
 import {Link} from 'react-router-dom'
 
 
-const NavBars = () => {
+const NavBars: React.FC = () => {
     function changeLanguage(lng: string) {
         if (lng) {
             i18n.changeLanguage(lng);

@@ -9,6 +9,7 @@ app.use(cors())
 app.use(express.json({extended: true}))
 
 app.use('/api/auth', require("./routes/user.routes"))
+app.use('/api/cars', require("./routes/cars.routes"))
 
 async function start() {
     try {

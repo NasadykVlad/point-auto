@@ -1,0 +1,119 @@
+.GlobalSearchCar-top {
+  max-width: 1060px;
+  margin: 0 auto;
+
+  .Cars {
+    margin-top: 15px;
+  }
+
+  .sayUkraine {
+    font-size: 22px;
+    margin: 10px 0;
+  }
+}
+
+.GlobalSearchCar-middle {
+  max-width: 1060px;
+  margin: 0 auto;
+
+  .breadcums {
+    color: #256799;
+    text-decoration: none;
+    margin-right: 10px;
+
+    &-passive:hover {
+      border-bottom: 1px solid #256799;
+    }
+
+    &:after {
+      content: '\203a';
+      color: #999b9f;
+      font-size: 16px;
+      display: inline-block;
+      margin-left: 5px;
+    }
+
+    &-active {
+      cursor: default;
+      color: #414042;
+    }
+  }
+
+  h4 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+
+  .active-numb {
+    color: #256799;
+    text-decoration: none;
+    font-weight: bold;
+
+    &:hover {
+      border-bottom: 1px solid #256799;
+    }
+  }
+
+  .statistic span {
+    margin-left: 10px;
+  }
+
+  .statistic span:before {
+    background: #898989;
+    padding: 2px;
+    border-radius: 50%;
+    display: inline-block;
+    left: -7px;
+    position: relative;
+    top: -2px;
+    content: "";
+  }
+
+  .search-tags {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    div {
+      width: 79%;
+      display: flex;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #e0e3e4;
+      p {
+        cursor: pointer;
+        background: #db5c4c;
+        color: white;
+        padding: 0 5px 0 8px;
+        border-radius: 5px;
+        margin: 0 4px;
+        & span:hover {
+          border-bottom: 1px solid white;
+        }
+        & svg {
+          display: inline-block;
+          font-size: 23px;
+          position: relative;
+          bottom: .8px;
+           path {
+            stroke: white;
+          }
+        }
+      }
+    }
+
+    a {
+      height: 45px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid #256799;
+      color: #256799;
+      border-radius: 5px;
+      width: 200px;
+      text-decoration: none;
+    }
+  }
+
+}

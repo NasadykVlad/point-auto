@@ -158,7 +158,7 @@ const SearchCars: React.FC = () => {
                     </div>
 
                     <div className="rightSearch">
-                        <Link to="/"><span><img src="./images/lupa.svg" alt="Lupa"/></span>Пошук</Link>
+                        <Link to="/global-search"><span><img src="./images/lupa.svg" alt="Lupa"/></span>Пошук</Link>
                     </div>
 
                 </div>

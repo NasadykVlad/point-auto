@@ -7,6 +7,7 @@ import Cars from "./pages/cars/cars";
 import RealEstate from "./pages/real-estate/real-estate";
 import AutoParts from "./pages/auto-parts/auto-parts";
 import AutoProducts from "./pages/auto-products/auto-products";
+import GlobalSearchCar from "./pages/GlobalSearchCar/GlobalSearchCar";
 
 export const useRoutes = (isLogin: null | boolean) => {
     if (isLogin) {
@@ -25,6 +26,7 @@ export const useRoutes = (isLogin: null | boolean) => {
                 <Route path="/real-estate" element={<RealEstate/>}/>
                 <Route path="/auto-products" element={<AutoProducts/>}/>
                 <Route path="/auto-parts" element={<AutoParts/>}/>
+                <Route path="/global-search" element={<GlobalSearchCar/>}/>
             </Routes>
         )
     }

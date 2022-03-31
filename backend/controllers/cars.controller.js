@@ -22,6 +22,20 @@ class carsController {
         }
     }
 
+    async getAllCars (req, res) {
+        try {
+            let cars = await db.query('SELECT * FROM user_cars')
+
+            cars.rows.forEach(car => {
+                delete car.owner
+            })
+
+            res.json({cars: cars.rows})
+        } catch (e) {
+            console.log(e)
+        }
+    }
+
     async searchOtherModel (req, res) {
        try {
            const {brand} = req.body

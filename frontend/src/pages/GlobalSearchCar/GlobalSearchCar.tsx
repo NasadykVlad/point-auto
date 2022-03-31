@@ -4,7 +4,8 @@ import TopNavBarOnCars from "../../components/topNavBarOnCars/topNavBarOnCars";
 import useBreadcrumbs from 'use-react-router-breadcrumbs';
 import {GrFormClose} from 'react-icons/gr'
 import {Link} from "react-router-dom";
-
+import LeftSearch from "../../components/LeftSearch/LeftSearch";
+import CarsOnSearch from "../../components/CarsOnSearch/CarsOnSearch";
 
 const GlobalSearchCar: React.FC = () => {
     const breadcrumbs = useBreadcrumbs();
@@ -63,6 +64,10 @@ const GlobalSearchCar: React.FC = () => {
                     <Link to='/'>Уточнити пошук</Link>
                 </div>
             </div>
+                <div className="main">
+                    <LeftSearch />
+                    <CarsOnSearch />
+                </div>
         </>
     );
 };

@@ -81,6 +81,7 @@
       padding: 10px;
       border-radius: 5px;
       border: 1px solid #e0e3e4;
+
       p {
         cursor: pointer;
         background: #db5c4c;
@@ -88,15 +89,18 @@
         padding: 0 5px 0 8px;
         border-radius: 5px;
         margin: 0 4px;
+
         & span:hover {
           border-bottom: 1px solid white;
         }
+
         & svg {
           display: inline-block;
           font-size: 23px;
           position: relative;
           bottom: .8px;
-           path {
+
+          path {
             stroke: white;
           }
         }
@@ -115,5 +119,11 @@
       text-decoration: none;
     }
   }
+}
 
+.main {
+  max-width: 1060px;
+  display: flex;
+  justify-content: space-between;
+  margin: 25px auto 0 auto;
 }

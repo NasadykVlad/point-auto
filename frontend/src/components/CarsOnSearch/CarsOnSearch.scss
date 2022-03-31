@@ -1,0 +1,221 @@
+.CarsOnSearch {
+  width: 72%;
+
+  .sort {
+    width: 100%;
+    display: flex;
+
+    & p:first-child span:after {
+      background-image: url("data:image/svg+xml,%3Csvg width='16' height='11' viewBox='0 0 16 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.5 3H2L5 0H11L11.75 0.75L8 4.5L6 2.5L4.5 4L8 7.5L13.25 2.25L14 3H15.5C15.7761 3 16 3.22386 16 3.5C16 3.77614 15.7761 4 15.5 4H15V10C15 10.5523 14.5523 11 14 11H13C12.4477 11 12 10.5523 12 10V9H4V10C4 10.5523 3.55228 11 3 11H2C1.44772 11 1 10.5523 1 10V4H0.5C0.223858 4 0 3.77614 0 3.5C0 3.22386 0.223858 3 0.5 3Z' fill='%23256799'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      padding: 8px;
+      top: 11.5px;
+      left: 5px;
+      position: relative;
+      content: "";
+    }
+
+    p:first-child select {
+      border: none;
+      outline: none;
+      margin-left: 10px;
+      color: #3c9806;
+      font-size: 16.5px;
+      border-bottom: 1px dotted #3c9806;
+
+      & option {
+        color: black
+      }
+    }
+
+    .filling {
+      margin-left: 20px;
+
+      select {
+        border: none;
+        outline: none;
+        margin-left: 10px;
+        color: #256799;
+        font-size: 16.5px;
+        border-bottom: 1px dotted #256799;
+
+        & option {
+          color: black
+        }
+      }
+    }
+  }
+
+  .car {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+
+    .photo {
+      img {
+        width: 320px;
+      }
+    }
+
+    .info {
+      height: 100%;
+      width: 56%;
+      display: flex;
+      flex-wrap: wrap;
+
+      & a {
+        display: block;
+        text-decoration: none;
+        font-size: 20px;
+        color: #256799;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      & .prices {
+        display: flex;
+        width: 100%;
+      }
+
+      & p {
+        & span {
+          font-size: 25px;
+        }
+      }
+
+      .price {
+        color: #3c9806;
+        font-weight: bold;
+
+        & span {
+          font-weight: bold;
+        }
+      }
+
+      .price-dollars:after {
+        background: #b6b6b6;
+        padding: 2.5px;
+        border-radius: 50%;
+        display: inline-block;
+        position: relative;
+        left: 15px;
+        bottom: 5px;
+        content: "";
+      }
+
+      .price-dollars {
+        margin: 0;
+      }
+
+      .price-ua {
+        color: #414042;
+        margin: 7px 0 0 26px;
+
+        span {
+          color: #414042;
+          font-size: 17px;
+        }
+      }
+
+      &_main {
+        width: 100%;
+        display: flex;
+        margin-top: 5px;
+
+        .bot {
+          width: 70%;
+
+          & span {
+            &:nth-child(3) {
+              display: block;
+              margin-top: 5px;
+            }
+
+            img {
+              width: 18px;
+              margin-right: 5px;
+            }
+          }
+        }
+
+        .top {
+          width: 50%;
+
+          & span {
+            &:nth-child(3) {
+              display: block;
+              margin-top: 5px;
+            }
+
+            img {
+              width: 18px;
+              margin-right: 5px;
+            }
+          }
+        }
+      }
+
+      .numbers {
+        display: flex;
+        width: 100%;
+        margin-top: 10px;
+
+        p {
+          margin: 0;
+          border: 1px solid #07499d;
+          padding: 0 10px 0 10px;
+          color: #414042;
+
+          &:nth-child(2) {
+            margin-left: 20px;
+          }
+
+          & img {
+            position: relative;
+            bottom: 1px;
+            margin-right: 5px;
+          }
+        }
+
+        .state_number {
+          &:before {
+            background-color: #07499d;
+            font-size: 12px;
+            color: #fff;
+            text-align: center;
+            position: relative;
+            right: 5px;
+            width: 11px;
+            top: 2px;
+            padding-top: 6px;
+            content: "UA";
+          }
+        }
+      }
+
+      .desc {
+        white-space: nowrap;
+        width: 380px;
+        overflow: hidden;
+        margin-top: 10px;
+        text-overflow: ellipsis;
+        margin-bottom: 0;
+      }
+
+      .date {
+        color: #9b9b9b;;
+        margin-top: 10px;
+        font-size: 17px;
+        margin-bottom: 0;
+        & img {
+          position: relative;
+          bottom: 2px;
+          margin-right: 7px;
+        }
+      }
+    }
+  }
+}

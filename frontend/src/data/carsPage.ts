@@ -316,3 +316,30 @@ nextYears.reverse()
 nextYears.unshift('до')
 prevYears.reverse()
 prevYears.unshift('від')
+
+export const optionsTypeSort: {label: string}[] = [
+    {label: "Спочатку з VIN-кодом"},
+    {label: "Від дешевих до дорогих"},
+    {label: "Від дорогих до дешевих"},
+    {label: "Дата додавання"},
+    {label: "Рік випуску, за зростанням"},
+    {label: "Рік випуску, за спаданням"},
+    {label: "Пробіг, за зростанням"},
+    {label: "Пробіг, за спаданням"}
+]
+
+export const fillingPeriod: {label: string}[] = [
+    {label: "Усі"},
+    {label: "За годину"},
+    {label: "За 3 години"},
+    {label: "За 6 годин"},
+    {label: "За 12 годин"},
+    {label: "За сьогодні"},
+    {label: "За добу"},
+    {label: "За 2 дні"},
+    {label: "За 3 дні"},
+    {label: "За тиждень"},
+    {label: "За місяць"},
+    {label: "За 3 місяці"}
+]
+
